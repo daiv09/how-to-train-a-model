@@ -273,7 +273,7 @@ struct HowToUseSheet: View {
         NavigationStack {
             ScrollView {
                 VStack(alignment: .leading, spacing: 30) {
-                    instructionRow(step: "1", title: "Add Categories", description: "Tap '+ Add category' to create groups for objects you want your AI to recognize.", icon: "plus.circle.fill", color: .blue)
+                    instructionRow(step: "1", title: "Add Categories", description: "Tap '+ Add category' to create groups for objects you want your Model to recognize.", icon: "plus.circle.fill", color: .blue)
                     instructionRow(step: "2", title: "Rapid-Fire Capture", description: "Select a group and HOLD the capture button down to record continuous photo samples.", icon: "hand.tap.fill", color: .orange)
                     instructionRow(step: "3", title: "Swipe to Manage", description: "Swipe LEFT on any category card to Rename, Edit individual samples, or Delete the group.", icon: "arrow.left.to.line", color: .purple)
                     Spacer()
@@ -318,7 +318,6 @@ extension CollectorView {
                 }
             }
             Spacer()
-            if isCapturing { Circle().stroke(Color.blue.opacity(0.4), lineWidth: 4).frame(width: 80, height: 80).modifier(SafePulseEffect(active: isCapturing)) }
         }
     }
 

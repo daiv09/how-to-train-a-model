@@ -155,7 +155,7 @@ struct InfoDataStore {
     static let epochs = ParameterInfo(
         navTitle: "Intensity Guide",
         question: "What is an Epoch?",
-        answer: "An epoch is one full cycle where the AI looks at every image in your dataset. More cycles generally lead to better recognition.",
+        answer: "An epoch is one full cycle where the Model looks at every image in your dataset. More cycles generally lead to better recognition.",
         options: TrainingIntensity.allCases.map { intensity in
             InfoRowData(
                 icon: intensity.icon,
@@ -164,13 +164,13 @@ struct InfoDataStore {
                 desc: "Training cycles set to \(intensity.rawValue)."
             )
         },
-        proTip: "Too many epochs on a small dataset can cause 'Overfitting', where the AI memorizes images instead of learning patterns."
+        proTip: "Too many epochs on a small dataset can cause 'Overfitting', where the Model memorizes images instead of learning patterns."
     )
     
     static let batchSize = ParameterInfo(
         navTitle: "Batch Size Guide",
         question: "What is Batch Size?",
-        answer: "Batch size is the number of images the AI looks at before updating its knowledge.",
+        answer: "Batch size is the number of images the Model looks at before updating its knowledge.",
         options: BatchSize.allCases.map { size in
             InfoRowData(
                 icon: size.icon,
@@ -185,7 +185,7 @@ struct InfoDataStore {
     static let learningStyle = ParameterInfo(
         navTitle: "Learning Style",
         question: "What is Learning Rate?",
-        answer: "This controls the 'Learning Rate' - how big of a jump the AI makes when it learns something new.",
+        answer: "This controls the 'Learning Rate' - how big of a jump the Model makes when it learns something new.",
         options: LearningStyle.allCases.map { style in
             InfoRowData(
                 icon: style.icon,

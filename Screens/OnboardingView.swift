@@ -46,7 +46,7 @@ struct OnboardingView: View {
                     OnboardingStepRow(
                         icon: "arkit",
                         title: "Take Flight in AR",
-                        description: "Step into the real world. Point your camera at objects to see your AI in action.",
+                        description: "Step into the real world. Point your camera at objects to see your Model in action.",
                         color: .purple
                     )
                 }

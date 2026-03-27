@@ -40,7 +40,7 @@ class TrainingManager: ObservableObject {
             do {
                 let trainingDir = try await Self.createTrainingDirectory(classData: extractedData)
                 
-                await MainActor.run { self.statusMessage = "Training AI..." }
+                await MainActor.run { self.statusMessage = "Training Model..." }
                 
                 var parameters = MLImageClassifier.ModelParameters()
                 parameters.maxIterations = epochs

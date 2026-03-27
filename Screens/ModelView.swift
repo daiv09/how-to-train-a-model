@@ -57,7 +57,7 @@ struct ModelView: View {
                     .font(.headline)
                     .foregroundStyle(.primary)
                 
-                Text(isTraining ? "AI is processing features..." : "Model state: Ready")
+                Text(isTraining ? "Model is processing features..." : "Model state: Ready")
                     .font(.caption)
                     .foregroundStyle(.secondary)
             }
