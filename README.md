@@ -1,7 +1,6 @@
 # How To Train A Model 🧠
 
-> [!IMPORTANT]
-> ### 🏆 Swift Student Challenge 2026 Winner
+[![Alt text for the video thumbnail](https://ik.imagekit.io/kqmrslzuq/SSC%20'26/SSC26_Confetti_16x9_Winner%201.jpg)](https://ik.imagekit.io/kqmrslzuq/SSC%20'26/SSC26_Confetti_16x9_Winner.mp4)
 
 ![Award](https://img.shields.io/badge/Swift_Student_Challenge-2026_Winner-gold?style=for-the-badge&logo=apple)
 ![Swift](https://img.shields.io/badge/Swift-5.9+-orange.svg?style=for-the-badge)
