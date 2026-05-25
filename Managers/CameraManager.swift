@@ -58,13 +58,29 @@ class CameraManager: NSObject, ObservableObject, AVCaptureVideoDataOutputSampleB
     func captureCurrentThumb() -> UIImage? {
         guard let cgImage = currentFrame else { return nil }
         
+        let cgImageWidth = CGFloat(cgImage.width)
+        let cgImageHeight = CGFloat(cgImage.height)
+        guard cgImageWidth > 0, cgImageHeight > 0 else { return nil }
+        
+        let targetSize: CGSize
+        let maxDimension: CGFloat = 224
+        if cgImageWidth > cgImageHeight {
+            let targetWidth = maxDimension
+            let targetHeight = (cgImageHeight / cgImageWidth) * maxDimension
+            targetSize = CGSize(width: targetWidth, height: targetHeight)
+        } else {
+            let targetHeight = maxDimension
+            let targetWidth = (cgImageWidth / cgImageHeight) * maxDimension
+            targetSize = CGSize(width: targetWidth, height: targetHeight)
+        }
+        
         let format = UIGraphicsImageRendererFormat()
         format.scale = 1.0
         format.opaque = false
         
-        let renderer = UIGraphicsImageRenderer(size: CGSize(width: 224, height: 224), format: format)
+        let renderer = UIGraphicsImageRenderer(size: targetSize, format: format)
         return renderer.image { _ in
-            UIImage(cgImage: cgImage).draw(in: CGRect(x: 0, y: 0, width: 224, height: 224))
+            UIImage(cgImage: cgImage).draw(in: CGRect(origin: .zero, size: targetSize))
         }
     }
 }

@@ -2,6 +2,10 @@ import SwiftUI
 import CoreML
 import Vision
 import CoreImage
+import CoreVideo
+
+extension VNCoreMLModel: @unchecked Sendable {}
+extension CVBuffer: @unchecked Sendable {}
 
 @MainActor
 class ObjectClassifier: ObservableObject {
